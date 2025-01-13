@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F2; /* Off-White */
+            color: #404040; /* Charcoal Gray */
+        }
+
+        /* Header */
+        header {
+            background-color: #2E7D32; /* Forest Green */
+            color: #F4F4F2; /* Off-White */
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #F4F4F2; /* Off-White */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #A5D16C; /* Lime Green */
+        }
+
+        /* slider div */
+        .slider{
+            overflow: hidden;
+        }
+
+        .slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            animation: 10s slider infinite;
+        }
+        img {
+            /* width: 20vw; */
+            height: 50vh;
+        }
+        .slider figure img {
+            float: left;
+            width: 20%;
+        }
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+            33% {
+                left: 0;
+            }
+            38% {
+                left: -100%;
+            }
+            66% {
+                left: -100%;
+            }
+            71% {
+                left: -200%;
+            }
+            90% {
+                left: -200%;
+            }
+            100% {
+                left: -300%;
+            }
+        }
+
+        /* Hero Section */
+
+        .hero {
+            position: relative; /* Allow absolute positioning of children */
+            color: #F4F4F2; /* Off-White */
+            text-align: center;
+            padding: 4rem 2rem;
+            z-index: 0; /* Ensure content is above the slider */
+        }
+
+        .slider {
+            position: absolute; /* Position it behind hero */
+            top: 0; /* Align to top */
+            left: 0; /* Align to left */
+            right: 0; /* Stretch to full width */
+            height: 50vh; /* Set height as needed */
+            z-index: -1; /* Ensure it's behind hero */
+        }
+
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .hero button {
+            background-color: #A5D16C; /* Lime Green */
+            color: #404040; /* Charcoal Gray */
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero button:hover {
+            background-color: #8B5E3C; /* Earth Brown */
+            color: #F4F4F2; /* Off-White */
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            margin-top: 90px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background-color: #D8C3A5; /* Taupe Brown */
+            border: 1px solid #8B5E3C; /* Earth Brown */
+            border-radius: 8px;
+            width: 300px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #2E7D32; /* Forest Green */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8B5E3C; /* Earth Brown */
+            color: #F4F4F2; /* Off-White */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>AgroTech</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to AgroTech</h2>
+        <p>Your trusted partner in sustainable agriculture</p>
+        <button>Learn More</button>
+    </section>
+    
+    <div class="slider">
+        <figure>
+            <img src="assets/farm1.jpg" alt="1" />
+            <img src="assets/farm2.webp" alt="2" />
+            <img src="assets/farm3.jpeg" alt="3" />
+            <!-- <img src="assets/farm2.webp" alt="2" /> -->
+            <img src="assets/farm1.jpg" alt="1" />
+        </figure>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h3>Eco-Friendly Practices</h3>
+            <p>Discover innovative techniques for sustainable farming.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Seasonal Updates</h3>
+            <p>Stay informed about the latest trends in agriculture.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Community Support</h3>
+            <p>Join a network of farmers and agricultural experts.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AgroTech. All rights reserved.</p>
+    </footer>
+</body>
+</html>
